@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a class="navbarLink" href="{% url 'index' %}">Inventory Manager</a>
+        <button
+          class="navbarToggler"
+          onClick="toggleNavbar()"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbarIcon"></span>
+        </button>
+        <div class="navbarCollapse" id="navbarNav">
+          <ul class="navbarNav">
+            <li class="navItem">
+              <a class="navLink" href="#">Sign In</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Include the JavaScript file -->
+    <script src="{% static 'js/navbar.js' %}"></script>
+  </body>
+</html>

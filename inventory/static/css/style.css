@@ -1,0 +1,100 @@
+.navbar {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbarLink {
+  font-size: 1.5rem;
+  color: #000;
+  text-decoration: none;
+}
+
+.navbarToggler {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.navbarIcon {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #333;
+  position: relative;
+}
+
+.navbarIcon::before,
+.navbarIcon::after {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: #333;
+  position: absolute;
+  left: 0;
+}
+
+.navbarIcon::before {
+  top: -8px;
+}
+
+.navbarIcon::after {
+  top: 8px;
+}
+
+.navbarCollapse {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbarNav {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin-left: 1rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.navLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .navbarCollapse {
+    display: none;
+    flex-direction: column;
+    background: #f8f9fa;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .navbarToggler {
+    display: block;
+  }
+}
+
+.navbarCollapse.open {
+  display: flex;
+}
