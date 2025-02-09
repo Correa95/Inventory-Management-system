@@ -1,18 +1,68 @@
-{% extends "inventory/base.html" %} {% block content %}
+{% extends "inventory/base.html" %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 
 <div class="row">
-  <div class="col-11 col-md4 mx-auto mt-5">
+  <div class="form-container">
     <h1>Sign Up</h1>
-    {% if form.errors%} {%for field in form%} {%for error in field.errors%}
-    <div class="alert alert-danger">
-      <strong>{{error|escape}}</strong>
+
+    {% if form.errors %} {% for field in form %} {% for error in field.errors %}
+    <div class="alert error">
+      <strong>{{ error|escape }}</strong>
     </div>
     {% endfor %} {% endfor %} {% for error in form.non_field_errors %}
-    <div class="alert alert-danger">
-      <strong>{{error|escape}}</strong>
+    <div class="alert error">
+      <strong>{{ error|escape }}</strong>
     </div>
     {% endfor %} {% endif %}
-    <form method="post">{% csrf_token %} {{form}}</form>
+
+    <form method="post">
+      {% csrf_token %}
+
+      <!-- Render fields manually to include labels and placeholders -->
+      <div class="form-group">
+        <label for="{{ form.username.id_for_label }}">Username:</label>
+        {{ form.username }}
+        <small class="form-text text-muted"
+          >Required. 150 characters or fewer. Letters, digits and @/./+/-/_
+          only.</small
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="{{ form.email.id_for_label }}">Email:</label>
+        {{ form.email }}
+      </div>
+
+      <div class="form-group">
+        <label for="{{ form.password.id_for_label }}">Password:</label>
+        {{ form.password }}
+        <small class="form-text text-muted"
+          >Your password can’t be too similar to your other personal
+          information.</small
+        >
+        <small class="form-text text-muted"
+          >Your password must contain at least 8 characters.</small
+        >
+        <small class="form-text text-muted"
+          >Your password can’t be a commonly used password.</small
+        >
+        <small class="form-text text-muted"
+          >Your password can’t be entirely numeric.</small
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="{{ form.password_confirmation.id_for_label }}"
+          >Password confirmation:</label
+        >
+        {{ form.password_confirmation }}
+        <small class="form-text text-muted"
+          >Enter the same password as before, for verification.</small
+        >
+      </div>
+
+      <button class="btn-submit" type="submit">Sign Up</button>
+    </form>
   </div>
 </div>
 

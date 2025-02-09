@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic import TemplateView, View
 from django.contrib.auth import authenticate, login
+from .forms import UserRegisterForm
 
 # Create your views here.
 class Index(TemplateView):
@@ -9,7 +10,7 @@ class Index(TemplateView):
 class SignUpView(View):
     def get(self, request):
         form = UserRegisterForm()
-        return render(request, "inventory/sign.html", {"form":form})
+        return render(request, "inventory/signup.html", {"form":form})
 
 
     def post(self, request):
