@@ -1,34 +1,43 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <title>Document</title>
-  </head>
-  <body>
-    <nav class="navbar">
-      <div class="container">
-        <a class="navbarLink" href="{% url 'index' %}">Inventory Manager</a>
-        <button
-          class="navbarToggler"
-          onClick="toggleNavbar()"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbarIcon"></span>
-        </button>
-        <div class="navbarCollapse" id="navbarNav">
-          <ul class="navbarNav">
-            <li class="navItem">
-              <a class="navLink" href="#">Sign In</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+{% extends "inventory/base.html" %} {% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
 
-    <!-- Include the JavaScript file -->
-    <script src="{% static 'js/navbar.js' %}"></script>
-  </body>
-</html>
+{% block content %}
+<nav class="navbar">
+  <div class="container">
+    <a class="navbarLink" href="{% url 'index' %}">Inventory Manager</a>
+    <button
+      class="navbarToggler"
+      onclick="toggleNavbar()"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbarIcon"></span>
+    </button>
+  </div>
+  <div class="navbarCollapse" id="navbarNav">
+    <ul class="navbarNav">
+      {% if user.is_authenticated %}
+      <li class="navItem">
+        <a class="navLink" href="#">{{ user.username }}</a>
+      </li>
+      <li class="navItem">
+        <a class="navLink" href="{% url 'logout' %}">Sign Out</a>
+      </li>
+      {% else %}
+      <li class="navItem">
+        <a class="navLink" href="{% url 'login' %}">Sign In</a>
+      </li>
+      <li class="navItem">
+        <a class="navLink" href="{% url 'signup' %}">Sign Up</a>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+</nav>
+
+<script>
+  function toggleNavbar() {
+    const navbar = document.getElementById("navbarNav");
+    navbar.classList.toggle("active");
+  }
+</script>
+{% endblock %}
