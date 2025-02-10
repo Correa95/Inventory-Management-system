@@ -1,4 +1,4 @@
-{% extends "inventory/base.html" %} {% load static %}
+{% load static %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 
 {% block content %}
@@ -34,10 +34,11 @@
   </div>
 </nav>
 
+{% comment %}
 <script>
   function toggleNavbar() {
     const navbar = document.getElementById("navbarNav");
     navbar.classList.toggle("active");
   }
 </script>
-{% endblock %}
+{% endcomment %} {% endblock %}
