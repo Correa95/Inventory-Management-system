@@ -1,15 +1,16 @@
-{% extends "inventory/base.html" %} {% block content %}
-<div class="row">
-  <div class="col-11 col-md-4 mx-auto mt-5">
+{% extends "inventory/base.html" %}
+{% block content %}
+<div class="loginContainer">
+  <div class="login">
     <h1>Log In</h1>
-  <form method="post">
-    {form}
-    <button class="btn btn-outline-secondary">Sign In</button>
+    <form method="post">
+      {{ form }}
+      <button class="btnSignin">Sign In</button>
     </form>
-    <div class="pt-3">
-        <small class="text-muted">Need an account? 
-        <a href="{% url "signup"%}" class="ml-2">Sign Up</a> 
-        </small>
+    <div class="signUpLink">
+      <small>Need an account? 
+        <a href="{% url "signup" %}">Sign Up</a>
+      </small>
     </div>
   </div>
 </div>
