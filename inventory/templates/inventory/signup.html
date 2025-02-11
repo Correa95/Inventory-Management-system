@@ -35,7 +35,7 @@
 
       <div class="form-group">
         <label for="{{ form.password.id_for_label }}">Password:</label>
-        {{ form.password }}
+        {{ form.password1 }}
         <small class="form-text text-muted"
           >Your password can’t be too similar to your other personal
           information.</small
@@ -55,7 +55,7 @@
         <label for="{{ form.password_confirmation.id_for_label }}"
           >Password confirmation:</label
         >
-        {{ form.password_confirmation }}
+        {{ form.password2 }}
         <small class="form-text text-muted"
           >Enter the same password as before, for verification.</small
         >
@@ -63,8 +63,9 @@
 
       <button class="btn-submit" type="submit">Sign Up</button>
     </form>
-    <small>Already have an account? 
-      <a href="{% url "login %}">Sign In</a>
+    <small
+      >Already have an account?
+      <a href="{% url 'login' %}">Sign In</a>
     </small>
   </div>
 </div>
