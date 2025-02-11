@@ -248,3 +248,40 @@ form {
 .signUpLink a:hover {
   text-decoration: underline;
 }
+
+.message {
+  padding: 1.5rem;
+}
+
+.header {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.alertMessage {
+  font-size: 1.2rem;
+  color: #777;
+  margin-bottom: 2rem;
+}
+
+/* Button Styling */
+.btnA {
+  text-decoration: none;
+}
+
+.btn {
+  background-color: #007bff;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
