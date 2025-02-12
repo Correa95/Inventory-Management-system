@@ -1,0 +1,34 @@
+{% extends "inventory/base.html" %} {% block content %} {% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+
+<div class="dashboardContainer">
+  <div class="dashboard">
+    <div class="btnContainer">
+      <a href="#" class="btnAdd">+</a>
+    </div>
+    <table class="inventoryTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>QTY</th>
+          <th>Category</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>-</th>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock content %}

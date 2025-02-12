@@ -98,20 +98,6 @@
 .navbarCollapse.open {
   display: flex;
 }
-/* /////////////////////// Form Styling */
-/* Base Styles */
-/* body {
-  font-family: "Arial", sans-serif;
-  background-color: #f9f9f9;
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  text-align: center;
-  font-size: 2rem;
-  color: #333;
-} */
 
 .row {
   display: flex;
@@ -254,7 +240,7 @@ form {
 }
 
 .header {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #333;
   margin-bottom: 1rem;
@@ -284,4 +270,70 @@ form {
 
 .btn:hover {
   background-color: #0056b3;
+}
+
+/* dashboard styling */
+.dashboardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dashboard {
+  border: 2px solid red;
+  width: 90%;
+  max-width: 1000px;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Button */
+.btnContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.btnAdd {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 20px;
+  color: white;
+  background: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btnAdd:hover {
+  background: #0056b3;
+}
+
+/* Table */
+.inventoryTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.inventoryTable th,
+.inventoryTable td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.inventoryTable th {
+  background: #007bff;
+  color: white;
+}
+
+.inventoryTable tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.inventoryTable tbody tr:hover {
+  background: #007bff;
 }

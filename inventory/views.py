@@ -7,6 +7,11 @@ from .forms import UserRegisterForm
 class Index(TemplateView):
     template_name = "inventory/index.html"
 
+
+class Dashboard(View):
+    def get(self, request):
+        return render(request, "inventory/dashboard.html")
+
 class SignUpView(View):
     def get(self, request):
         form = UserRegisterForm()
@@ -24,7 +29,7 @@ class SignUpView(View):
             login(request, user)
             return redirect("index")
         return render(request, "inventory/signup.html" , {"form": form})
-class LogoutView(View):
-    def get(self, request):
-        logout(request)
-        return redirect('index')
+# class LogoutView(View):
+#     def get(self, request):
+#         logout(request)
+#         return redirect('index')
