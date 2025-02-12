@@ -18,6 +18,7 @@
         </tr>
       </thead>
       <tbody>
+        {% if items|length == 0 %}
         <tr>
           <th>-</th>
           <td>-</td>
@@ -25,8 +26,15 @@
           <td>-</td>
           <td>-</td>
           <td>-</td>
-          <td>-</td>
         </tr>
+        {% endif %} {% for item in items%}
+        <tr>
+          <td scope="row">{{item.id}}</td>
+          <td scope="row">{{item.name}}</td>
+          <td scope="row">{{item.quantity}}</td>
+          <td scope="row">{{item.category.name}}</td>
+        </tr>
+        {% endfor %}
       </tbody>
     </table>
   </div>
