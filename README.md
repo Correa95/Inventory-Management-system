@@ -21,3 +21,18 @@ extra:I import django, II print(django.get_version())
 
 
 <!-- #########command to create DataBase,  py create_db.py -->
+
+<!-- creating and admin user steps
+python manage.py createsuperuser
+You’ll be prompted to enter:
+Username (e.g., admin)
+Email address (optional)
+Password (you’ll need to confirm it)
+Make sure the password meets Django’s complexity requirements. -->
+
+<!-- Resetting and admin user steps
+1. python manage.py shell
+2. from django.contrib.auth import get_user_model
+3. User = get_user_model()
+4. User.objects.filter(username="your_admin_username").delete()
+5. print("Admin user deleted!") -->
