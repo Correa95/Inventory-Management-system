@@ -20,7 +20,27 @@
         <a class="navLink" href="#">{{ user.username }}</a>
       </li>
       <li class="navItem">
-        <a class="navLink" href="{% url 'logout' %}">Sign Out</a>
+        <form action="{% url 'logout' %}" method="post" style="display: inline">
+          {% csrf_token %}
+          <button
+            type="submit"
+            class="navLink"
+            {%
+            comment
+            %}
+            style="
+              background: none;
+              border: none;
+              cursor: pointer;
+              color: inherit;
+            "
+            {%
+            endcomment
+            %}
+          >
+            Sign Out
+          </button>
+        </form>
       </li>
       {% else %}
       <li class="navItem">
@@ -33,5 +53,4 @@
     </ul>
   </div>
 </nav>
-
-{% endcomment %} {% endblock %}
+{% endblock %}
