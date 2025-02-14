@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
-from django.views.generic import TemplateView, View
+from django.urls import reverse_lazy
+from django.views.generic import TemplateView, View, CreateView
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .forms import UserRegisterForm
-from .models import InventoryItem
+from .forms import UserRegisterForm, InventoryItemForm
+from .models import InventoryItem, Category
 
 # Create your views here.
 class Index(TemplateView):
@@ -36,3 +37,21 @@ class LogoutView(View):
     def get(self, request):
         logout(request)
         return redirect('index')
+
+class AddItem(LoginRequiredMixin, CreateView):
+    model = InventoryItem
+    form_class = InventoryItemForm
+    template_name = "inventory/itemForm.html"
+    success_url = reverse_lazy("dashboard")
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["category"] = category.objects.all()
+        return context
+
+    def form_invalid(self, form):
+        form.instance.user = self.request.username
+        response = super().form_invalid(form)
+        
+    
+    

@@ -1,0 +1,16 @@
+{% extends "inventory/base.html" %}
+{% block content %}
+<a href="{% url "dashboard"%}" class="btn">Go Back</a>
+<div class="row">
+    <div class="container">
+        <h2>Inventory Item</h2>
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="btnContainer">
+                <button class="btn">Add Item</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}
