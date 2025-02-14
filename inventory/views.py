@@ -46,7 +46,7 @@ class AddItem(LoginRequiredMixin, CreateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["category"] = category.objects.all()
+        context["category"] = Category.objects.all()
         return context
 
     def form_invalid(self, form):

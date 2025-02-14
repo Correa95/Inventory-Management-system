@@ -2,52 +2,39 @@
 <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 
 {% block content %}
-<nav class="navbar">
-  <div class="container">
-    <a class="navbarLink" href="{% url 'index' %}">Inventory Manager</a>
-    <button
-      class="navbarToggler"
-      onclick="toggleNavbar()"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbarIcon"></span>
-    </button>
+<nav class="navbarContainer">
+  <div class="navbartitle">
+    <a href="{% url 'index' %}">Inventory Manager</a>
   </div>
-  <div class="navbarCollapse" id="navbarNav">
-    <ul class="navbarNav">
+  <div class="navbarBtn" id="navbarNav">
+    <ul>
       {% if user.is_authenticated %}
-      <li class="navItem">
-        <a class="navLink" href="#">{{ user.username }}</a>
+      <li>
+        <a href="#">{{ user.username }}</a>
       </li>
-      <li class="navItem">
+      <li>
         <form action="{% url 'logout' %}" method="post" style="display: inline">
           {% csrf_token %}
           <button
             type="submit"
             class="navLink"
-            {%
-            comment
-            %}
             style="
               background: none;
               border: none;
               cursor: pointer;
               color: inherit;
             "
-            {%
-            endcomment
-            %}
           >
             Sign Out
           </button>
         </form>
       </li>
       {% else %}
-      <li class="navItem">
-        <a class="navLink" href="{% url 'login' %}">Sign In</a>
+      <li>
+        <a href="{% url 'login' %}">Sign In</a>
       </li>
-      <li class="navItem">
-        <a class="navLink" href="{% url 'signup' %}">Sign Up</a>
+      <li>
+        <a href="{% url 'signup' %}">Sign Up</a>
       </li>
       {% endif %}
     </ul>

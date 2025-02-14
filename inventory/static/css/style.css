@@ -1,32 +1,49 @@
-.navbar {
+.navbarContainer {
   background-color: #f8f9fa;
-  padding: 1rem;
+  padding: 16px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border: 2px solid red;
 }
 
-.container {
+.navbartitle {
   display: flex;
   align-items: center;
   width: 100%;
+  min-height: 100vh;
   max-width: 1200px;
   margin: 0 auto;
 }
+.navbarBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
 
-.navbarLink {
-  font-size: 1.5rem;
+ul li {
+  margin-left: 16px;
+}
+
+a {
+  font-size: 26px;
   color: #000;
   text-decoration: none;
 }
 
-.navbarToggler {
+/* .navbarToggler {
   background: none;
   border: none;
   cursor: pointer;
   display: none;
-}
+} */
 
 .navbarIcon {
   display: block;
@@ -54,20 +71,9 @@
   top: 8px;
 }
 
-.navbarCollapse {
+.navbarCollapse ul {
   display: flex;
   justify-content: flex-end;
-}
-
-.navbarNav {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.navItem {
-  margin-left: 1rem;
 }
 
 .navLink {
