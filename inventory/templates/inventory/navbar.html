@@ -3,7 +3,7 @@
 
 {% block content %}
 <nav class="navbarContainer">
-  <div class="navbartitle">
+  <div class="navbarTitle">
     <a href="{% url 'index' %}">Inventory Manager</a>
   </div>
   <div class="navbarBtn" id="navbarNav">
@@ -15,18 +15,7 @@
       <li>
         <form action="{% url 'logout' %}" method="post" style="display: inline">
           {% csrf_token %}
-          <button
-            type="submit"
-            class="navLink"
-            style="
-              background: none;
-              border: none;
-              cursor: pointer;
-              color: inherit;
-            "
-          >
-            Sign Out
-          </button>
+          <button type="submit" class="btnSubmit">Sign Out</button>
         </form>
       </li>
       {% else %}

@@ -2,7 +2,7 @@
 {% block content %}
 <div class="loginContainer">
   <div class="login">
-    <h1>Log In</h1>
+    <h1 class="loginTitle">Log In</h1>
     
     <!-- Display form errors -->
     {% if form.errors %}
@@ -18,7 +18,7 @@
       </div>
     {% endif %}
     
-    <form method="post">
+    <form method="post" class="form">
       {% csrf_token %}
       
       <div class="form-group">
@@ -34,7 +34,7 @@
       <button class="btnSignin" type="submit">Sign In</button>
     </form>
 
-    <div class="signUpLink">
+    <div class="btnSignUp">
       <small>Need an account? 
         <a href="{% url "signup" %}">Sign Up</a>
       </small>

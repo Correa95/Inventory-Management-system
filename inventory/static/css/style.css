@@ -1,4 +1,11 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* /////////////////////// navbar //////////////////// */
 .navbarContainer {
+  height: 200px;
   background-color: #f8f9fa;
   padding: 16px;
   position: relative;
@@ -8,12 +15,12 @@
   border: 2px solid red;
 }
 
-.navbartitle {
+.navbarTitle {
   display: flex;
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
 }
 .navbarBtn {
@@ -32,78 +39,18 @@ ul li {
   margin-left: 16px;
 }
 
-a {
-  font-size: 26px;
+/* a {
+  font-size: 18px;
   color: #000;
   text-decoration: none;
-}
-
-/* .navbarToggler {
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: none;
 } */
-
-.navbarIcon {
-  display: block;
-  width: 25px;
-  height: 2px;
-  background-color: #333;
-  position: relative;
-}
-
-.navbarIcon::before,
-.navbarIcon::after {
-  content: "";
-  width: 25px;
-  height: 2px;
-  background-color: #333;
-  position: absolute;
-  left: 0;
-}
-
-.navbarIcon::before {
-  top: -8px;
-}
-
-.navbarIcon::after {
-  top: 8px;
-}
-
-.navbarCollapse ul {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.navLink {
+form .btnSubmit {
+  font-size: 18px;
+  color: #000;
   text-decoration: none;
-  color: #007bff;
+  border: none;
 }
-
-.navLink:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-  .navbarCollapse {
-    display: none;
-    flex-direction: column;
-    background: #f8f9fa;
-    width: 100%;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
-
-  .navbarToggler {
-    display: block;
-  }
-}
-
-.navbarCollapse.open {
-  display: flex;
-}
+/* /////////////////////// navbar end //////////////////// */
 
 .row {
   display: flex;
@@ -154,7 +101,7 @@ small.form-text {
   color: #777;
 }
 
-.alert {
+/* .alert {
   padding: 0.75rem;
   margin-bottom: 1rem;
   border-radius: 5px;
@@ -165,7 +112,7 @@ small.form-text {
   background-color: #ffe6e6;
   color: #d9534f;
   border: 1px solid #f5c6cb;
-}
+} */
 
 .btn-submit {
   background-color: #007bff;
@@ -184,7 +131,6 @@ small.form-text {
 }
 
 /* Login Form */
-/* Container and Layout */
 .loginContainer {
   display: flex;
   justify-content: center;
@@ -203,13 +149,13 @@ small.form-text {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+.loginTitle {
   font-size: 24px;
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
 }
 
-form {
+.form {
   display: flex;
   flex-direction: column;
 }
@@ -227,19 +173,21 @@ form {
   background-color: #d6d6d6;
 }
 
-.signUpLink {
+.btnSignUp {
   text-align: center;
   padding-top: 1rem;
 }
 
-.signUpLink a {
+.btnSignUp a {
   color: #007bff;
   text-decoration: none;
 }
 
-.signUpLink a:hover {
+.btnSignUp a:hover {
   text-decoration: underline;
+  font-size: 14px;
 }
+/* ////////////////// Login Form end /////////////////////*/
 
 .message {
   padding: 1.5rem;
