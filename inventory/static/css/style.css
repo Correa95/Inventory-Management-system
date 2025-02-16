@@ -3,6 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+}
 /* /////////////////////// navbar //////////////////// */
 .navbarContainer {
   height: 120px;
@@ -19,7 +22,7 @@
   font-size: 26px;
   display: flex;
   align-items: center;
-  width: 100%;
+  /* width: 100%; */
   min-height: 100vh;
 
   /* max-width: 1200px; */
@@ -40,11 +43,11 @@ ul li {
   margin-left: 16px;
 }
 
-/* a {
-  font-size: 18px;
+ul li a {
+  font-size: 26px;
   color: #000;
   text-decoration: none;
-} */
+}
 form .btnSubmit {
   font-size: 26px;
   color: #000;
@@ -227,7 +230,7 @@ small.form-text {
   background-color: #0056b3;
 }
 
-/* dashboard styling */
+/*/////////////// dashboard styling ////////////////////*/
 .dashboardContainer {
   display: flex;
   justify-content: center;
@@ -292,3 +295,26 @@ small.form-text {
 .inventoryTable tbody tr:hover {
   background: #007bff;
 }
+/*/////////// dashboard styling end ////////////*/
+
+/* ////////  logout style ////// */
+.logoutContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
+}
+.logoutContainer h2 {
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.logout small a {
+  font-size: 16px;
+  text-decoration: none;
+}
+.logout small {
+  font-size: 16px;
+  text-decoration: none;
+}
+/* //////////  logout style end ////// */
