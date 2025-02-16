@@ -5,7 +5,7 @@
 }
 /* /////////////////////// navbar //////////////////// */
 .navbarContainer {
-  height: 200px;
+  height: 120px;
   background-color: #f8f9fa;
   padding: 16px;
   position: relative;
@@ -16,14 +16,17 @@
 }
 
 .navbarTitle {
+  font-size: 26px;
   display: flex;
   align-items: center;
   width: 100%;
   min-height: 100vh;
+
   /* max-width: 1200px; */
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 .navbarBtn {
+  font-size: 26px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,8 +34,6 @@
 ul {
   list-style: none;
   display: flex;
-  margin: 0;
-  padding: 0;
 }
 
 ul li {
@@ -45,7 +46,7 @@ ul li {
   text-decoration: none;
 } */
 form .btnSubmit {
-  font-size: 18px;
+  font-size: 26px;
   color: #000;
   text-decoration: none;
   border: none;
