@@ -300,8 +300,10 @@ small.form-text {
 /* ////////  logout style ////// */
 .logoutContainer {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 100px;
+  /* justify-content: center; */
+
+  /* align-items: center; */
   border: 2px solid red;
 }
 .logoutContainer h2 {
