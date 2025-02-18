@@ -157,6 +157,7 @@ form .btnSubmit {
 }
 .dashboard {
   border: 2px solid red;
+  flex-direction: column;
   width: 90%;
   max-width: 1000px;
   margin: 50px auto;
@@ -192,13 +193,28 @@ form .btnSubmit {
 .inventoryTable tbody tr:hover {
   background: #007bff;
 }
+.btnAdd {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 20px;
+  color: white;
+  background: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btnAdd:hover {
+  background: #0056b3;
+}
 /*/////////// dashboard styling end ////////////*/
 
 /* ////////  logout style ////// */
 .logoutContainer {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
   min-height: 100vh;
   background-color: #f9f9f9;
 }
@@ -319,19 +335,4 @@ small.formText {
   font-size: 24px;
   color: #777;
   margin-bottom: 32px;
-}
-
-.btnAdd {
-  display: inline-block;
-  padding: 10px 15px;
-  font-size: 20px;
-  color: white;
-  background: #007bff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.btnAdd:hover {
-  background: #0056b3;
 }
