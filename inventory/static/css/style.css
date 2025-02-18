@@ -129,23 +129,6 @@ form .btnSubmit {
 }
 /* ////////////////// Login Form end /////////////////////*/
 
-.message {
-  padding: 1.5rem;
-}
-
-.header {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 1rem;
-}
-
-.alertMessage {
-  font-size: 1.2rem;
-  color: #777;
-  margin-bottom: 2rem;
-}
-
 /* Button Styling */
 .btnA {
   text-decoration: none;
@@ -181,28 +164,6 @@ form .btnSubmit {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Button */
-.btnContainer {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 15px;
-}
-
-.btnAdd {
-  display: inline-block;
-  padding: 10px 15px;
-  font-size: 20px;
-  color: white;
-  background: #007bff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.btnAdd:hover {
-  background: #0056b3;
 }
 
 /* Table */
@@ -248,6 +209,7 @@ form .btnSubmit {
 
 .logout small a {
   font-size: 16px;
+  display: inline-block;
   text-decoration: none;
 }
 .logout small {
@@ -334,16 +296,42 @@ small.formText {
   background-color: #0056b3;
 }
 /* //////////  sign up style  end////// */
-
-/* .btnSignin {
-  padding: 10px 15px;
-  background-color: #e0e0e0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+/* //////////  Index style  end////// */
+.indexContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+.message {
+  padding: 24px;
 }
 
-.btnSignin:hover {
-  background-color: #d6d6d6;
-} */
+.header {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.alertMessage {
+  font-size: 24px;
+  color: #777;
+  margin-bottom: 32px;
+}
+
+.btnAdd {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 20px;
+  color: white;
+  background: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btnAdd:hover {
+  background: #0056b3;
+}
