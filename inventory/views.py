@@ -33,6 +33,7 @@ class SignUpView(View):
             login(request, user)
             return redirect("index")
         return render(request, "inventory/signup.html" , {"form": form})
+    
 class LogoutView(View):
     def get(self, request):
         logout(request)
@@ -50,7 +51,7 @@ class AddItem(LoginRequiredMixin, CreateView):
         return context
 
     def form_invalid(self, form):
-        form.instance.user = self.request.username
+        form.instance.user = self.request.user
         response = super().form_invalid(form)
         
     

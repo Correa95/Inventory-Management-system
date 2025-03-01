@@ -99,9 +99,10 @@ form .btnSubmit {
   flex-direction: column;
 }
 
-.btnSignin {
-  padding: 10px 15px;
+.btnSignin a {
+  /* padding: 10px 15px; */
   background-color: #e0e0e0;
+  color: #007bff;
   border: none;
   border-radius: 4px;
   cursor: pointer;

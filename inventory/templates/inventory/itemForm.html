@@ -6,7 +6,18 @@
         <h2>Inventory Item</h2>
         <form method="POST">
             {% csrf_token %}
-
+            <div class="formGroup">
+                <label for="{{ form.email.id_for_label }}">Name</label>
+                {{ form.email }}
+              </div>
+            <div class="formGroup">
+                <label for="{{ form.email.id_for_label }}">Quantity</label>
+                {{ form.email }}
+              </div>
+            <div class="formGroup">
+                <label for="{{ form.email.id_for_label }}">Category</label>
+                {{ form.email }}
+              </div>
             <div class="btnContainer">
                 <button class="btn">Add Item</button>
             </div>
