@@ -353,3 +353,47 @@ small.formText {
   color: #777;
   margin-bottom: 32px;
 }
+
+/* //////////////   addTem form     ///////////////// */
+.itemContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.items {
+  max-width: 400px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inventoryItem {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.form_Group {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.btnItem {
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+.btnItem:hover {
+  background-color: #007bff;
+  color: #fff;
+}

@@ -1,26 +1,26 @@
 {% extends "inventory/base.html" %}
 {% block content %}
-<a href="{% url "dashboard"%}" class="btn">Go Back</a>
-<div class="row">
-    <div class="container">
+<div class="itemContainer">
+  <a href="{% url "dashboard"%}" class="btn">Go Back</a>
+    <div class="items">
         <h2>Inventory Item</h2>
-        <form method="POST">
+        <form method="POST" class="form">
             {% csrf_token %}
-            <div class="formGroup">
+            <div class="form_Group">
                 <label for="{{ form.email.id_for_label }}">Name</label>
                 {{ form.email }}
               </div>
-            <div class="formGroup">
+            <div class="form_Group">
                 <label for="{{ form.email.id_for_label }}">Quantity</label>
                 {{ form.email }}
               </div>
-            <div class="formGroup">
+            <div class="form_Group">
                 <label for="{{ form.email.id_for_label }}">Category</label>
                 {{ form.email }}
               </div>
-            <div class="btnContainer">
-                <button class="btn">Add Item</button>
-            </div>
+            {% comment %} <div class="btnItemContainer"> {% endcomment %}
+                <button class="btnItem">Add Item</button>
+            {% comment %} </div> {% endcomment %}
         </form>
     </div>
 </div>
