@@ -42,17 +42,17 @@ class LogoutView(View):
 class AddItem(LoginRequiredMixin, CreateView):
     model = InventoryItem
     form_class = InventoryItemForm
-    template_name = "inventory/itemForm.html"
+    template_name = "inventory/addItemForm.html"
     success_url = reverse_lazy("dashboard")
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["category"] = Category.objects.all()
+        context["categories"] = Category.objects.all()
         return context
 
     def form_invalid(self, form):
         form.instance.user = self.request.user
-        response = super().form_invalid(form)
+        return super().form_invalid(form)
         
     
     
