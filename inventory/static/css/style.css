@@ -213,6 +213,7 @@ form .btnSubmit {
 
 .inventoryTable tbody tr:hover {
   background: #007bff;
+  color: #fff;
 }
 /*/////////// dashboard styling end ////////////*/
 

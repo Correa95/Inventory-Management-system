@@ -4,23 +4,27 @@
   <a href="{% url "dashboard"%}" class="btnBack">Go Back</a>
     <div class="items">
         <h2>Inventory Item</h2>
-        <form method="POST" class="form">
+        <form method="POST" class="formItem">
             {% csrf_token %}
+
             <div class="form_Group">
-                <label for="{{ form.email.id_for_label }}">Name</label>
+                <label for="{{ form.name.id_for_label}}">Name</label>
                 {{ form.name }}
               </div>
+
             <div class="form_Group">
-                <label for="{{ form.email.id_for_label }}">Quantity</label>
-                {{ <form action="" class="quantity"></form> }}
+                <label for="{{ form.quantity.id_for_label }}">Quantity</label>
+                {{ form.quantity }}
               </div>
+
             <div class="form_Group">
-                <label for="{{ form.email.id_for_label }}">Category</label>
+                <label for="{{ form.category.id_for_label }}">Category</label>
                 {{ form.category }}
               </div>
-            {% comment %} <div class="btnItemContainer"> {% endcomment %}
+
+            
                 <button class="btnItem">Add Item</button>
-            {% comment %} </div> {% endcomment %}
+
         </form>
     </div>
 </div>
