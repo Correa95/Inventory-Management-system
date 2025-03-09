@@ -202,10 +202,10 @@ form .btnSubmit {
   text-align: left;
 }
 
-.inventoryTable th {
+/* .inventoryTable th {
   background: #007bff;
   color: white;
-}
+} */
 
 .inventoryTable tbody tr:nth-child(even) {
   background: #f9f9f9;
