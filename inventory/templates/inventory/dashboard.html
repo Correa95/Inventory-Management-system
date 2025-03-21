@@ -33,7 +33,7 @@
           <td scope="row">{{item.name}}</td>
           <td scope="row">{{item.quantity}}</td>
           <td scope="row">{{item.category.name}}</td>
-          <td></td>
+          <td><a href="{%url "editItem" item.id %}" class="editBtn">Edit</a></td>
           <td></td>
         </tr>
         {% endfor %}

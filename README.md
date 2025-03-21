@@ -1,7 +1,5 @@
 # Inventory-Management-system
 
-# Django-Tutorial
-
 <!-- virtual environment setup instruction OR Steps for python Flask
 
 1. py -m venv .venv,  create the virtual environment
