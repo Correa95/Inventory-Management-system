@@ -50,14 +50,15 @@ class AddItem(LoginRequiredMixin, CreateView):
         context["categories"] = Category.objects.all()
         return context
 
-    def form_invalid(self, form):
-        form.instance.user = self.request.user
-        return super().form_invalid(form)
+    def form_valid(self, form):
+        form.instance.user = self.request.user  # ✅ Assign user before saving
+        return super().form_valid(form)
+
     
 class EditItem(LoginRequiredMixin, UpdateView):
     model = InventoryItem
     form_class = InventoryItemForm
-    template_name = "inventory/item_form.html"
+    template_name = "inventory/addItemForm.html"
     success_url = reverse_lazy("dashboard")
         
     
