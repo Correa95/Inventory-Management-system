@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
-from django.views.generic import TemplateView, View, CreateView, UpdateView
+from django.views.generic import TemplateView, View, CreateView, UpdateView, DeleteView
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import UserRegisterForm, InventoryItemForm
@@ -51,7 +51,7 @@ class AddItem(LoginRequiredMixin, CreateView):
         return context
 
     def form_valid(self, form):
-        form.instance.user = self.request.user  # ✅ Assign user before saving
+        form.instance.user = self.request.user 
         return super().form_valid(form)
 
     
@@ -60,6 +60,13 @@ class EditItem(LoginRequiredMixin, UpdateView):
     form_class = InventoryItemForm
     template_name = "inventory/addItemForm.html"
     success_url = reverse_lazy("dashboard")
+
+class DeleteItem(LoginRequiredMixin, DeleteView):
+    model = InventoryItem
+    template_name = "inventory/deleteItem.html"
+    success_url = reverse_lazy("dashboard")
+    context_object_name = "item"
+    
         
     
     
