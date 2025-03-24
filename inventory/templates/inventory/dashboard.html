@@ -34,7 +34,7 @@
           <td scope="row">{{item.quantity}}</td>
           <td scope="row">{{item.category.name}}</td>
           <td><a href="{%url "editItem" item.id %}" class="editBtn">Edit</a></td>
-          <td></td>
+          <td><a href="{%url "deleteItem" item.id %}" class"deleteBtn">Delete</a></td>
         </tr>
         {% endfor %}
       </tbody>

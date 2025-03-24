@@ -6,6 +6,9 @@
         {% csrf_token %}
         <h1>Are you sure you want to delete{{item.name}}?</h1>
         <p>This cannot be undone</p>
+        <div>
+            <button class="btnDanger">Delete</button>
+        </div>
     </form>
 </div>
 
