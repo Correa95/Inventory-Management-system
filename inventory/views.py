@@ -25,11 +25,15 @@ class Dashboard(LoginRequiredMixin, View):
                 # show a message
                 messages.error(request, f"{low_inventory.count()} items have low inventory")
             else:
-                message.error(request, f"{low_inventory.count()} items has low inventory")
                 # show a message
+                message.error(request, f"{low_inventory.count()} items has low inventory")
+        low_inventory_ids = InventoryItem.objects.filter(
+            user = self.request.user.id,
+            quantity__lte = LOW_QUANTITY
+        ).values_list("id", flat=True)
 
 
-        return render(request, "inventory/dashboard.html", {"items":items})
+        return render(request, "inventory/dashboard.html", {"items":items, "low_inventory_ids": low_inventory_ids})
 
 class SignUpView(View):
     def get(self, request):
