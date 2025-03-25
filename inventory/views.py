@@ -5,7 +5,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import UserRegisterForm, InventoryItemForm
 from .models import InventoryItem, Category
-
+from inventory_management.settings import LOW_QUANTITY
+from django.contrib import messages
 # Create your views here.
 class Index(TemplateView):
     template_name = "inventory/index.html"
@@ -17,8 +18,15 @@ class Dashboard(LoginRequiredMixin, View):
 
         low_inventory = InventoryItem.objects.filter(
             user=self.request.user.id,
-            quantity__lte=LOW_QUANTIRY
+            quantity__lte=LOW_QUANTITY
         )
+        if low_inventory.count() > 0:
+            if low_inventory.count() > 1:
+                # show a message
+            else:
+                # show a message
+
+
         return render(request, "inventory/dashboard.html", {"items":items})
 
 class SignUpView(View):
