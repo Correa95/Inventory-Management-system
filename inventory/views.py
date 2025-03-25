@@ -14,6 +14,11 @@ class Index(TemplateView):
 class Dashboard(LoginRequiredMixin, View):
     def get(self, request):
         items = InventoryItem.objects.filter(user = self.request.user.id).order_by("id")
+
+        low_inventory = InventoryItem.objects.filter(
+            user=self.request.user.id,
+            quantity__lte=LOW_QUANTIRY
+        )
         return render(request, "inventory/dashboard.html", {"items":items})
 
 class SignUpView(View):
