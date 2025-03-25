@@ -6,7 +6,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import UserRegisterForm, InventoryItemForm
 from .models import InventoryItem, Category
 from inventory_management.settings import LOW_QUANTITY
-from django.contrib import messages
+from django.contrib import messages, message
 # Create your views here.
 class Index(TemplateView):
     template_name = "inventory/index.html"
@@ -23,7 +23,9 @@ class Dashboard(LoginRequiredMixin, View):
         if low_inventory.count() > 0:
             if low_inventory.count() > 1:
                 # show a message
+                messages.error(request, f"{low_inventory.count()} items have low inventory")
             else:
+                message.error(request, f"{low_inventory.count()} items has low inventory")
                 # show a message
 
 
