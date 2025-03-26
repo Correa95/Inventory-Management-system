@@ -1,5 +1,19 @@
-{% extends "inventory/base.html" %} {% block content %} {% load static %}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+{% extends "inventory/base.html" %}
+ {% block content %}
+{% if messages %}
+<div class="message">
+  {% for message in messages %}
+  {% if message.tag == "error" %}
+  <div>
+    {{message}}
+  </div>
+  {% else %}
+  <div>
+    {{message}}
+  </div>
+</div>
+{% endif %}
+{% endfor %}
 
 <div class="dashboardContainer">
   <div class="dashboard">
