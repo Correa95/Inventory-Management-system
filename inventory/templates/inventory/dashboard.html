@@ -1,24 +1,19 @@
-{% extends "inventory/base.html" %}
- {% block content %}
-{% if messages %}
+{% extends "inventory/base.html" %} {% block content %} {% if messages %}
 <div class="message">
   {% for message in messages %}
-  {% if message.tag == "error" %}
-  <div>
-    {{message}}
+  <div
+    class="{% if 'error' in message.tags %}error-message{% else %}info-message{% endif %}"
+  >
+    {{ message }}
   </div>
-  {% else %}
-  <div>
-    {{message}}
-  </div>
+  {% endfor %}
 </div>
 {% endif %}
-{% endfor %}
 
 <div class="dashboardContainer">
   <div class="dashboard">
     <div class="btnContainer">
-      <a href="{% url "addItem"%}" class="btnAdd">+</a>
+      <a href="{% url 'addItem' %}" class="btnAdd">+</a>
     </div>
     <table class="inventoryTable">
       <thead>
@@ -41,14 +36,20 @@
           <td>-</td>
           <td></td>
         </tr>
-        {% endif %} {% for item in items%}
+        {% endif %} {% for item in items %}
         <tr>
-          <td scope="row">{{item.id}}</td>
-          <td scope="row">{{item.name}}</td>
-          <td scope="row">{{item.quantity}}</td>
-          <td scope="row">{{item.category.name}}</td>
-          <td><a href="{%url "editItem" item.id %}" class="editBtn">Edit</a></td>
-          <td><a href="{%url "deleteItem" item.id %}" class"deleteBtn">Delete</a></td>
+          <td scope="row">{{ item.id }}</td>
+          <td scope="row">{{ item.name }}</td>
+          <td scope="row">{{ item.quantity }}</td>
+          <td scope="row">{{ item.category.name }}</td>
+          <td>
+            <a href="{% url 'editItem' item.id %}" class="editBtn">Edit</a>
+          </td>
+          <td>
+            <a href="{% url 'deleteItem' item.id %}" class="deleteBtn"
+              >Delete</a
+            >
+          </td>
         </tr>
         {% endfor %}
       </tbody>
