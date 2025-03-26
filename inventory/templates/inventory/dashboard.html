@@ -40,7 +40,11 @@
         <tr>
           <td scope="row">{{ item.id }}</td>
           <td scope="row">{{ item.name }}</td>
-          <td scope="row">{{ item.quantity }}</td>
+          {% if item.id in low_inventory_ids %}
+          <td scope="row" class="worn">{{ item.quantity }}</td>
+          {% else %}
+          <td scope="row" class="ok">{{ item.quantity }}</td>
+          {% endif %}
           <td scope="row">{{ item.category.name }}</td>
           <td>
             <a href="{% url 'editItem' item.id %}" class="editBtn">Edit</a>
