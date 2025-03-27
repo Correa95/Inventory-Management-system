@@ -392,3 +392,70 @@ small.formText {
   color: #fff;
   border-radius: 10px;
 }
+
+/* /////////////Delete item///////////////// */
+/* Style for the back button */
+.btnDeleteBack {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btnDeleteBack:hover {
+  background-color: #0056b3;
+}
+
+/* Style for the delete confirmation form */
+.deleteItemContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  position: relative;
+  padding-top: 40px; /* To account for the back button */
+}
+
+.deleteItem {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px; /* Ensure the form doesn't stretch too wide */
+  text-align: center;
+}
+
+.deleteItem h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.deleteItem p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.btnDanger {
+  padding: 12px 25px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnDanger:hover {
+  background-color: #c82333;
+}
