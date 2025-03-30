@@ -406,7 +406,7 @@ small.formText {
 
 /* /////////////Delete item///////////////// */
 /* Style for the back button */
-.btnDeleteBack {
+/* .btnDeleteBack {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -417,7 +417,7 @@ small.formText {
   border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.3s ease;
-}
+} */
 
 .btnDeleteBack:hover {
   background-color: #0056b3;
