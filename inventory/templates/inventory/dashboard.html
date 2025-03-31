@@ -43,7 +43,7 @@
           {% if item.id in low_inventory_ids %}
           <td scope="row" class="danger">{{ item.quantity }}</td>
           {% else %}
-          <td scope="row" class="calm">{{ item.quantity }}</td>
+          <td scope="row" class="ok">{{ item.quantity }}</td>
           {% endif %}
           <td scope="row">{{ item.category.name }}</td>
           <td>

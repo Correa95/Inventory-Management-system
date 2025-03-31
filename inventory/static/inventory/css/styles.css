@@ -490,6 +490,10 @@ small.formText {
 .editBtn {
   color: #c82333;
 }
+
 .danger {
   color: #dc3545;
+}
+.ok {
+  color: #c82333;
 }
