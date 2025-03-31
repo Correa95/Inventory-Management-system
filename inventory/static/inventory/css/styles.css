@@ -333,13 +333,24 @@ small.formText {
 
 /* //////////////   addTem form     ///////////////// */
 .itemContainer {
-  max-width: 600px;
+  /* width: 100px; */
+  height: 100vh;
+  /* max-width: 600px; */
   margin: 20px auto;
   padding: 20px;
   background: #f9f9f9;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
   position: relative;
+}
+.items {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  width: 50%;
+  /* max-width: 500px;  */
+  text-align: center;
 }
 
 .btnBack {
@@ -428,6 +439,7 @@ small.formText {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100px;
   height: 100vh; /* Full screen height */
   position: relative;
   /* padding-top: 40px;  */
