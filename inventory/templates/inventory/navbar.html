@@ -10,7 +10,7 @@
     <ul>
       {% if user.is_authenticated %}
       <li>
-        <a href="#">{{ user.username }}</a>
+        <a href="#" class="username">{{ user.username }}</a>
       </li>
       <li>
         <form action="{% url 'logout' %}" method="post" style="display: inline">
