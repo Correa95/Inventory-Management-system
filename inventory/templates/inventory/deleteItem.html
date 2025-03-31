@@ -4,7 +4,7 @@
 <div class="deleteItem">
     <form method="POST">
         {% csrf_token %}
-        <h1>Are you sure you want to delete{{item.name}}?</h1>
+        <h1>Are you sure you want to delete {{item.name}}?</h1>
         <p>This cannot be undone</p>
         <div>
             <button class="btnDanger" type="submit">Delete</button>
