@@ -333,9 +333,7 @@ small.formText {
 
 /* //////////////   addTem form     ///////////////// */
 .itemContainer {
-  /* width: 100px; */
   height: 100vh;
-  /* max-width: 600px; */
   margin: 20px auto;
   padding: 20px;
   background: #f9f9f9;
@@ -348,10 +346,7 @@ small.formText {
   background-color: #f9f9f9;
   padding: 30px;
   border-radius: 8px;
-
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   width: 50%;
-  /* max-width: 500px;  */
   text-align: center;
 }
 
@@ -438,22 +433,21 @@ small.formText {
 
 /* Style for the delete confirmation form */
 .deleteItemContainer {
+  height: 100vh;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100vh; /* Full screen height */
   position: relative;
-  /* padding-top: 40px;  */
 }
 
 .deleteItem {
   background-color: #f9f9f9;
   padding: 30px;
   border-radius: 8px;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-  width: 100%;
-  /* max-width: 500px;  */
+  width: 50%;
   text-align: center;
 }
 
