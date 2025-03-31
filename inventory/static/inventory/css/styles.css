@@ -484,3 +484,12 @@ small.formText {
 .btnDanger:hover {
   background-color: #c82333;
 }
+.deleteBtn {
+  color: #dc3545;
+}
+.editBtn {
+  color: #c82333;
+}
+.danger {
+  color: #dc3545;
+}
