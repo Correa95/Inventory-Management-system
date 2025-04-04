@@ -17,7 +17,6 @@
     <form method="post" class="form">
       {% csrf_token %}
 
-      <!-- Render fields manually to include labels and placeholders -->
       <div class="formGroup">
         <label for="{{ form.username.id_for_label }}">Username:</label>
         {{ form.username }}
