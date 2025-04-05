@@ -1,0 +1,499 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+/* /////////////////////// navbar //////////////////// */
+.navbarContainer {
+  height: 120px;
+  background-color: #f8f9fa;
+  padding: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid #007bff;
+}
+
+.navbarTitle {
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+.navbarBtn {
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ul {
+  list-style: none;
+  display: flex;
+}
+
+ul li {
+  margin-left: 16px;
+}
+
+ul li a {
+  font-size: 26px;
+  color: #000;
+  text-decoration: none;
+}
+form .btnSubmit {
+  font-size: 26px;
+  color: #000;
+  text-decoration: none;
+  border: none;
+}
+.username {
+  font-size: 26px;
+  color: #000;
+  text-decoration: none;
+  border: none;
+}
+/* /////////////////////// navbar end //////////////////// */
+
+/* Login Form */
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.login {
+  max-width: 400px;
+  width: 100%;
+  max-height: 400px;
+  height: 100vh;
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loginTitle {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form-group {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.btnSignin {
+  font-size: 20px;
+  background-color: #e0e0e0;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btnSignin:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.btnSignUp {
+  font-size: 16px;
+}
+.btnSignUp a {
+  font-size: 16px;
+  color: #007bff;
+}
+/* Login Form end*/
+
+.btnSignUp {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.btnSignUp a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.btnSignUp a:hover {
+  text-decoration: underline;
+  font-size: 14px;
+}
+/* ////////////////// Login Form end /////////////////////*/
+
+/*/////////////// dashboard styling ////////////////////*/
+.dashboardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dashboard {
+  border: 2px solid #007bff;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1000px;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.btnContainer {
+  float: right;
+}
+.btnAdd {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 20px;
+  color: white;
+  background: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btnAdd:hover {
+  background: #0056b3;
+}
+/* Table */
+.inventoryTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.inventoryTable th,
+.inventoryTable td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.inventoryTable th {
+  background: #007bff;
+  color: white;
+}
+
+.inventoryTable tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.inventoryTable tbody tr:hover {
+  background: #007bff;
+  color: #fff;
+}
+/*/////////// dashboard styling end ////////////*/
+
+/* ////////  logout style ////// */
+.logoutContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+.logoutContainer h2 {
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.logout small a {
+  font-size: 18px;
+  display: inline-block;
+  text-decoration: none;
+}
+.logout small {
+  font-size: 16px;
+  text-decoration: none;
+}
+/* //////////  logout style end ////// */
+/* //////////  sign up style ////// */
+.signUpContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.signUp {
+  max-width: 400px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signUpTitle {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.formGroup {
+  margin-bottom: 24px;
+}
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+small.formText {
+  display: block;
+  margin-top: 0.25rem;
+  color: #777;
+}
+.btnSubmit {
+  background-color: #007bff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.btnSubmit:hover {
+  background-color: #0056b3;
+}
+/* //////////  sign up style  end////// */
+
+/* //////////  Index style  start////// */
+.indexContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+.message {
+  padding: 24px;
+}
+.btnStart {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.header {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.alertMessage {
+  font-size: 24px;
+  color: #777;
+  margin-bottom: 32px;
+}
+
+/* //////////////   addTem form     ///////////////// */
+.itemContainer {
+  height: 100vh;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.items {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  width: 50%;
+  text-align: center;
+}
+
+.btnBack {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #007bff;
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btnBack:hover {
+  background: #0056b3;
+}
+
+.items {
+  text-align: center;
+}
+
+.inventoryItem {
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form_Group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form_Group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form_Group input,
+.form_Group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btnItem {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btnItem:hover {
+  background: #007bff;
+}
+
+/* /////////////Delete item///////////////// */
+/* Style for the back button */
+.btnDeleteBack {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btnDeleteBack:hover {
+  background-color: #0056b3;
+}
+
+/* Style for the delete confirmation form */
+.deleteItemContainer {
+  height: 100vh;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.deleteItem {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  width: 50%;
+  text-align: center;
+}
+
+.deleteItem h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.deleteItem p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.btnDanger {
+  padding: 12px 25px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnDanger:hover {
+  background-color: #c82333;
+}
+.deleteBtn {
+  color: #dc3545;
+}
+.editBtn {
+  color: #c82333;
+}
+
+.danger {
+  color: #dc3545;
+}
+.ok {
+  color: #004b2d;
+}
