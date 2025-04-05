@@ -120,7 +120,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'inventory/static'),  # Pointing to your app's static directory
+    os.path.join(BASE_DIR, 'static'),  # Pointing to your app's static directory
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
